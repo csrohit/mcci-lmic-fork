@@ -60,9 +60,9 @@ enum _dr_in866_t {
 //                 freq                 datarates
 enum {
         IN866_F1 = 866100000,      //   SF7-12 (DR0-5)
-        IN866_F2 = 865402500,      //   SF7-12 (DR0-5)
-        IN866_F3 = 865985000,      //   SF7-12 (DR0-5)
-        IN866_FB = 866550000,      //   beacon/ping
+        IN866_F2 = 866100000,      //   SF7-12 (DR0-5)
+        IN866_F3 = 866100000,      //   SF7-12 (DR0-5)
+        IN866_FB = 866100000,      //   beacon/ping
 };
 enum {
         IN866_FREQ_MIN = 865000000,

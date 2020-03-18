@@ -105,7 +105,7 @@ extern "C"{
 #define ARDUINO_LMIC_VERSION_CALC(major, minor, patch, local)	\
 	((((major)*UINT32_C(1)) << 24) | (((minor)*UINT32_C(1)) << 16) | (((patch)*UINT32_C(1)) << 8) | (((local)*UINT32_C(1)) << 0))
 
-#define	ARDUINO_LMIC_VERSION	ARDUINO_LMIC_VERSION_CALC(3, 1, 0, 10)	/* v3.1.0.10 */
+#define	ARDUINO_LMIC_VERSION	ARDUINO_LMIC_VERSION_CALC(3, 1, 0, 0)	/* v3.1.0.0 */
 
 #define	ARDUINO_LMIC_VERSION_GET_MAJOR(v)	\
 	((((v)*UINT32_C(1)) >> 24u) & 0xFFu)
@@ -259,12 +259,27 @@ enum { TXRX_ACK    = 0x80,   // confirmed UP frame was acked
 };
 
 // Event types for event callback
-enum _ev_t { EV_SCAN_TIMEOUT=1, EV_BEACON_FOUND,
-             EV_BEACON_MISSED, EV_BEACON_TRACKED, EV_JOINING,
-             EV_JOINED, EV_RFU1, EV_JOIN_FAILED, EV_REJOIN_FAILED,
-             EV_TXCOMPLETE, EV_LOST_TSYNC, EV_RESET,
-             EV_RXCOMPLETE, EV_LINK_DEAD, EV_LINK_ALIVE, EV_SCAN_FOUND,
-             EV_TXSTART, EV_TXCANCELED, EV_RXSTART, EV_JOIN_TXCOMPLETE };
+enum _ev_t { EV_SCAN_TIMEOUT=1,
+             EV_BEACON_FOUND,
+             EV_BEACON_MISSED,
+             EV_BEACON_TRACKED,
+             EV_JOINING,
+             EV_JOINED,
+             EV_RFU1,
+             EV_JOIN_FAILED,
+             EV_REJOIN_FAILED,
+             EV_TXCOMPLETE,
+             EV_LOST_TSYNC,
+             EV_RESET,
+             EV_RXCOMPLETE,
+             EV_LINK_DEAD,
+             EV_LINK_ALIVE,
+             EV_SCAN_FOUND,
+             EV_TXSTART,
+             EV_TXCANCELED,
+             EV_RXSTART,
+             EV_JOIN_TXCOMPLETE 
+};
 typedef enum _ev_t ev_t;
 
 // this macro can be used to initalize a normal table of event strings
